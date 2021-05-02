@@ -27,8 +27,6 @@ const ErrorPage = () => {
     width: "32rem",
     padding: "1rem",
     margin: "0 auto",
-    boxShadow:
-      "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
     lineHeight: 1,
     fontSize: "1rem",
     fontWeight: 500,
@@ -69,8 +67,15 @@ const ErrorPage = () => {
     <main style={mainStyle}>
       <style
         dangerouslySetInnerHTML={{
-          __html: `${shakeAnimaton}
-                  ${zoomAnimation}`,
+          __html: `
+          html, body {
+          margin: 0;
+          }
+          html * {
+          box-sizing: border-box;
+          }
+          ${shakeAnimaton}
+          ${zoomAnimation}`,
         }}
       />
 
