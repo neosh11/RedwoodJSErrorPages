@@ -13,18 +13,6 @@ const ErrorPage = () => {
     100% { transform: scale(1,1); }
   }`;
 
-  const sectionStyle: React.CSSProperties = {
-    width: "32rem",
-    padding: "1rem",
-    margin: "0 auto",
-    boxShadow:
-      "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
-    lineHeight: 1.5,
-    fontSize: "2rem",
-    fontWeight: 500,
-    color: "#2D3748",
-  };
-
   const mainStyle: React.CSSProperties = {
     display: "flex",
     alignItems: "center",
@@ -35,12 +23,24 @@ const ErrorPage = () => {
     height: "100vh",
   };
 
+  const sectionStyle: React.CSSProperties = {
+    width: "32rem",
+    padding: "1rem",
+    margin: "0 auto",
+    boxShadow:
+      "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+    lineHeight: 1,
+    fontSize: "1rem",
+    fontWeight: 500,
+    color: "#2D3748",
+  };
+
   const circleStyle: React.CSSProperties = {
     boxShadow:
       "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 3px 2px 0 rgba(0, 0, 0, 0.06)",
     margin: "auto",
-    width: "300px",
-    height: "300px",
+    width: "150px",
+    height: "150px",
     border: "10px solid #bf4722",
     borderRadius: "50%",
     fontSize: "50px",
@@ -51,6 +51,10 @@ const ErrorPage = () => {
     alignContent: "center",
     flexDirection: "column",
     animation: "zoomInOut 10s infinite",
+  };
+
+  const headerStyle: React.CSSProperties = {
+    fontSize: "2rem",
   };
 
   const linkStyle: React.CSSProperties = {
@@ -69,13 +73,14 @@ const ErrorPage = () => {
                   ${zoomAnimation}`,
         }}
       />
+
       <section style={sectionStyle}>
-        <div style={{ paddingBottom: "3rem" }}>
+        <div>
           <div style={circleStyle}>404</div>
         </div>
 
-        <span>Are you lost in the woods?</span>
-        <br />
+        <h1 style={headerStyle}>Page Not Found</h1>
+        <p>Are you lost in the woods?</p>
         <div style={shakeStyle}>
           <a style={linkStyle} href="/">
             Go Home
